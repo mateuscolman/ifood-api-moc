@@ -1,10 +1,15 @@
 const express = require('express');
 const routes = express.Router();
 
-const RequestConstroller = require('./controllers/RequestController');
+const StoreController = require('../src/controllers/StoreController');
+const RequestController = require('./controllers/RequestController');
 
-routes.get('/v2version/polling', RequestConstroller.polling);
-routes.post('/requests', RequestConstroller.placeOrder);
-routes.get('/v2.0/orders/:correlationId', RequestConstroller.order);
+//Pedidos!!
+routes.get('/v2version/polling', RequestController.polling);
+routes.post('/requests', RequestController.placeOrder);
+routes.get('/v2.0/orders/:correlationId', RequestController.order);
 
+//Lojas!!
+routes.post('/createstore', StoreController.createStore);
+routes.get('/genToken', StoreController.authentication);
 module.exports = routes;
