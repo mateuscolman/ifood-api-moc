@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Request = mongoose.model('Request');
 
+
 var formatter = (requests) => {
     return  pollingReturn = requests.map(r=>{
             return Object.assign({}, { 
@@ -33,5 +34,6 @@ module.exports = {
         const request = await Request.find({'correlationId': req.params.correlationId});
 
         return res.json(request);
-    }
+    },
+
 }

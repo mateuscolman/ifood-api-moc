@@ -1,5 +1,4 @@
 const moongose = require('mongoose');
-const moongosePaginate = require('mongoose-paginate');
 
 const RequestSchema = new moongose.Schema({
     code: //"CANCELLED",
@@ -322,5 +321,4 @@ const RequestSchema = new moongose.Schema({
 }
 ,)
 
-RequestSchema.plugin(moongosePaginate);
 moongose.model('Request', RequestSchema);
