@@ -243,6 +243,7 @@ const RequestSchema = new moongose.Schema({
         type: Number,
         required: true,
     },
+    
     deliveryFee: //"Taxa de entrega",
     {
         type: Number,
@@ -274,6 +275,27 @@ const RequestSchema = new moongose.Schema({
             }
         }
     ],
+
+    deliveryMethod: {
+        id: {
+            type: String
+        },
+        value: {
+            type: Number
+        },
+        minTime: {
+            type: Number
+        },
+        maxTime: {
+            type: Number
+        },
+        mode: {
+            type: String
+        },
+        deliveredBy: {
+            type: String
+        }
+    },
 
     deliveryAddress: {
         formattedAddress: //"Endereço completo de entrega",
