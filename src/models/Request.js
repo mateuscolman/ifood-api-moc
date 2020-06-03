@@ -248,6 +248,33 @@ const RequestSchema = new moongose.Schema({
         type: Number,
         required: true,
     },
+    benefits: //benefício referente ao desconto da entrega
+    [
+        {
+            value: 
+            {
+                type: Number
+            },
+            
+            sponsorshipValues:
+            {
+                IFOOD:
+                {
+                    type: Number
+                },
+                MERCHANT:
+                {
+                    type: Number
+                }
+            },
+
+            target:
+            {
+                type: String
+            }
+        }
+    ],
+
     deliveryAddress: {
         formattedAddress: //"Endereço completo de entrega",
         {
