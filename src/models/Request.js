@@ -21,6 +21,21 @@ const RequestSchema = new moongose.Schema({
         type: String,
         required: true,
     },
+    scheduled:
+    {
+        type: Boolean
+    },
+    isTest:
+    {
+        type: Boolean
+    },
+    preparationTimeInSeconds: {
+        type: Number
+    },
+    preparationStartDateTime: {
+        type: Date,
+        default: Date.now
+    },
     createdAt: //"Timestamp do pedido",
     {
         type: Date,
