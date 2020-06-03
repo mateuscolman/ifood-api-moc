@@ -21,7 +21,7 @@ module.exports = {
         //      } )
         // })   
         var pollingReturn = await formatter(requests);     
-        return res.json({pollingReturn});
+        return res.json(pollingReturn);
     },
 
     async placeOrder(req, res) {
@@ -33,7 +33,12 @@ module.exports = {
     async order(req, res) {
         const request = await Request.find({'correlationId': req.params.correlationId});
 
-        return res.json(request);
+        if (request.length > 0){
+            return res.json(request[0]);
+        }
+
+        return null;
+
     },
 
 }
