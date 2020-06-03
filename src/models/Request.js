@@ -34,7 +34,7 @@ const RequestSchema = new moongose.Schema({
     },
     preparationStartDateTime: {
         type: Date,
-        default: Date.now+10
+        default: Date.now
     },
     createdAt: //"Timestamp do pedido",
     {
