@@ -50,18 +50,18 @@ const RequestSchema = new moongose.Schema({
         id: // "Identificador unico do restaurante⁎"
         {
             type: String,
-            required: true,
+            
         },
         name: //"Nome do restaurante"
         {
             type: String,
-            required: true,
+            
         },
         phones: [
             //"Telefone do restaurante"
             {
                 type: Number,
-                required: true,
+                
             },
         ],
         address: {
@@ -72,37 +72,37 @@ const RequestSchema = new moongose.Schema({
             country: //"Pais",
             {
                 type: String,
-                required: true,
+                
             },
             state: //"Estado",
             {
                 type: String,
-                required: true,
+               
             },
             city: //"Cidade",
             {
                 type: String,
-                required: true,
+               
             },
             neighborhood: //"Bairro",
             {
                 type: String,
-                required: true,
+               
             },
             streetName: //"Endereço (Tipo logradouro + Logradouro)",
             {
                 type: String,
-                required: true,
+               
             },
             streetNumber: //"Numero",
             {
                 type: String,
-                required: true,
+              
             },
             postalCode: //"CEP"
             {
                 type: String,
-                required: true,
+              
             },
         }
     },
@@ -137,27 +137,27 @@ const RequestSchema = new moongose.Schema({
         id: //"Id do cliente",
         {
             type: String,
-            required: true,
+          
         },
         name: //"Nome do client",
         {
             type: String,
-            required: true,
+            
         },
         taxPayerIdentificationNumber: //"CPF/CNPJ do cliente ",
         {
             type: String,
-            required: true,
+        
         },
         phone: //"Telefone do cliente",
         {
             type: String,
-            required: true,
+           
         },
         email: //"Email do cliente"
         {
             type: String,
-            required: true,
+        
         },
     },
     items: [
@@ -320,49 +320,49 @@ const RequestSchema = new moongose.Schema({
         country: //"Pais",
         {
             type: String,
-            required: true,
+            
         },
         state: //"Estado",
         {
             type: String,
-            required: true,
+            
         },
         city: //"Cidade",
         {
             type: String,
-            required: true,
+            
         },
         coordinates: {
             latitude: //"Latitude do endereço",
             {
                 type: Number,
-                required: true,
+                
             },
             longitude: //"Longitude do endereço"
             {
                 type: Number,
-                required: true,
+               
             },
         },
         neighborhood: //"Bairro",
         {
             type: String,
-            required: true,
+           
         },
         streetName: //"Endereço(Tipo logradouro + Logradouro)",
         {
             type: String,
-            required: true,
+          
         },
         streetNumber: //"Numero",
         {
             type: String,
-            required: true,
+      
         },
         postalCode: //"CEP",
         {
             type: String,
-            required: true,
+         
         },
         reference: //"Referencia. Ex: Perto do Posto de Gasolina",
         {
